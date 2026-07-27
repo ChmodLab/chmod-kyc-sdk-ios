@@ -1,0 +1,34 @@
+//
+// Copyright Amazon.com Inc. or its affiliates.
+// All Rights Reserved.
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+// Chmod: translations ported from the chmod-liveness-android fork's
+// values-it/strings.xml, matched by English source text to the key names
+// used in this iOS fork.
+
+"amplify_ui_liveness_get_ready_photosensitivity_title" = "Avviso fotosensibilità";
+"amplify_ui_liveness_get_ready_photosensitivity_description" = "Questa verifica lampeggia con colori diversi. Fai attenzione se sei fotosensibile.";
+"amplify_ui_liveness_get_ready_photosensitivity_icon_a11y" = "Informazioni sulla fotosensibilità";
+"amplify_ui_liveness_get_ready_photosensitivity_dialog_title" = "Avviso fotosensibilità";
+"amplify_ui_liveness_get_ready_photosensitivity_dialog_description" = "Alcune persone possono avere crisi epilettiche esposte a luci colorate. Fai attenzione se tu o un familiare soffri di epilessia.";
+"amplify_ui_liveness_get_ready_begin_check" = "Inizia verifica";
+
+"amplify_ui_liveness_challenge_recording_indicator_label" = "REC";
+"amplify_ui_liveness_challenge_instruction_move_face_back" = "Allontanati";
+"amplify_ui_liveness_challenge_instruction_move_face_closer" = "Avvicinati";
+"amplify_ui_liveness_challenge_instruction_move_face_in_front_of_camera" = "Posiziona il tuo viso di fronte alla fotocamera";
+"amplify_ui_liveness_challenge_instruction_multiple_faces_detected" = "Solo un viso per verifica";
+"amplify_ui_liveness_challenge_instruction_hold_still" = "Stai fermo";
+
+"amplify_ui_liveness_challenge_connecting" = "Connessione...";
+"amplify_ui_liveness_challenge_verifying" = "Verifica";
+"amplify_ui_liveness_challenge_cancel_a11y" = "Annulla verifica";
+
+"amplify_ui_liveness_center_your_face_text" = "Centra il tuo viso";
+
+"amplify_ui_liveness_face_not_prepared_reason_move_face_closer" = "Avvicinati";
+"amplify_ui_liveness_face_not_prepared_reason_no_face" = "Posiziona il tuo viso di fronte alla fotocamera";
+"amplify_ui_liveness_face_not_prepared_reason_multiple_faces" = "Solo un viso per verifica";
+"amplify_ui_liveness_face_not_prepared_reason_face_too_close" = "Allontanati";

@@ -1,0 +1,34 @@
+//
+// Copyright Amazon.com Inc. or its affiliates.
+// All Rights Reserved.
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+// Chmod: translations ported from the chmod-liveness-android fork's
+// values-pt/strings.xml, matched by English source text to the key names
+// used in this iOS fork.
+
+"amplify_ui_liveness_get_ready_photosensitivity_title" = "Aviso de fotossensibilidade";
+"amplify_ui_liveness_get_ready_photosensitivity_description" = "Esta verificação pisca com cores diferentes. Tenha cuidado se você for fotossensível.";
+"amplify_ui_liveness_get_ready_photosensitivity_icon_a11y" = "Informações sobre fotossensibilidade";
+"amplify_ui_liveness_get_ready_photosensitivity_dialog_title" = "Aviso de fotossensibilidade";
+"amplify_ui_liveness_get_ready_photosensitivity_dialog_description" = "Algumas pessoas podem ter convulsões epilépticas ao serem expostas a luzes coloridas. Tenha cuidado se você ou alguém da sua família tiver epilepsia.";
+"amplify_ui_liveness_get_ready_begin_check" = "Iniciar verificação";
+
+"amplify_ui_liveness_challenge_recording_indicator_label" = "REC";
+"amplify_ui_liveness_challenge_instruction_move_face_back" = "Afaste-se";
+"amplify_ui_liveness_challenge_instruction_move_face_closer" = "Aproxime-se";
+"amplify_ui_liveness_challenge_instruction_move_face_in_front_of_camera" = "Posicione seu rosto em frente à câmera";
+"amplify_ui_liveness_challenge_instruction_multiple_faces_detected" = "Apenas um rosto por verificação";
+"amplify_ui_liveness_challenge_instruction_hold_still" = "Fique quieto";
+
+"amplify_ui_liveness_challenge_connecting" = "Conectando...";
+"amplify_ui_liveness_challenge_verifying" = "Verificando";
+"amplify_ui_liveness_challenge_cancel_a11y" = "Cancelar verificação";
+
+"amplify_ui_liveness_center_your_face_text" = "Centralize seu rosto";
+
+"amplify_ui_liveness_face_not_prepared_reason_move_face_closer" = "Aproxime-se";
+"amplify_ui_liveness_face_not_prepared_reason_no_face" = "Posicione seu rosto em frente à câmera";
+"amplify_ui_liveness_face_not_prepared_reason_multiple_faces" = "Apenas um rosto por verificação";
+"amplify_ui_liveness_face_not_prepared_reason_face_too_close" = "Afaste-se";

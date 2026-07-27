@@ -1,0 +1,34 @@
+//
+// Copyright Amazon.com Inc. or its affiliates.
+// All Rights Reserved.
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+// Chmod: translations ported from the chmod-liveness-android fork's
+// values-de/strings.xml, matched by English source text to the key names
+// used in this iOS fork.
+
+"amplify_ui_liveness_get_ready_photosensitivity_title" = "Hinweis zur Lichtempfindlichkeit";
+"amplify_ui_liveness_get_ready_photosensitivity_description" = "Diese Prüfung blinkt in verschiedenen Farben. Vorsicht bei Lichtempfindlichkeit.";
+"amplify_ui_liveness_get_ready_photosensitivity_icon_a11y" = "Informationen zur Lichtempfindlichkeit";
+"amplify_ui_liveness_get_ready_photosensitivity_dialog_title" = "Hinweis zur Lichtempfindlichkeit";
+"amplify_ui_liveness_get_ready_photosensitivity_dialog_description" = "Manche Menschen können epileptische Anfälle durch farbige Lichter erleiden. Vorsicht, wenn Sie oder jemand in Ihrer Familie an Epilepsie leidet.";
+"amplify_ui_liveness_get_ready_begin_check" = "Prüfung starten";
+
+"amplify_ui_liveness_challenge_recording_indicator_label" = "REC";
+"amplify_ui_liveness_challenge_instruction_move_face_back" = "Zurücktreten";
+"amplify_ui_liveness_challenge_instruction_move_face_closer" = "Näherkommen";
+"amplify_ui_liveness_challenge_instruction_move_face_in_front_of_camera" = "Gesicht vor die Kamera halten";
+"amplify_ui_liveness_challenge_instruction_multiple_faces_detected" = "Nur ein Gesicht pro Prüfung";
+"amplify_ui_liveness_challenge_instruction_hold_still" = "Stillhalten";
+
+"amplify_ui_liveness_challenge_connecting" = "Verbinden...";
+"amplify_ui_liveness_challenge_verifying" = "Wird geprüft";
+"amplify_ui_liveness_challenge_cancel_a11y" = "Prüfung abbrechen";
+
+"amplify_ui_liveness_center_your_face_text" = "Gesicht zentrieren";
+
+"amplify_ui_liveness_face_not_prepared_reason_move_face_closer" = "Näherkommen";
+"amplify_ui_liveness_face_not_prepared_reason_no_face" = "Gesicht vor die Kamera halten";
+"amplify_ui_liveness_face_not_prepared_reason_multiple_faces" = "Nur ein Gesicht pro Prüfung";
+"amplify_ui_liveness_face_not_prepared_reason_face_too_close" = "Zurücktreten";

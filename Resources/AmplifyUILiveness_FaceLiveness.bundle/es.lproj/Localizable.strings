@@ -1,0 +1,34 @@
+//
+// Copyright Amazon.com Inc. or its affiliates.
+// All Rights Reserved.
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+// Chmod: translations ported from the chmod-liveness-android fork's
+// values-es/strings.xml, matched by English source text to the key names
+// used in this iOS fork.
+
+"amplify_ui_liveness_get_ready_photosensitivity_title" = "Aviso de fotosensibilidad";
+"amplify_ui_liveness_get_ready_photosensitivity_description" = "Esta verificación parpadea con distintos colores. Ten precaución si eres fotosensible.";
+"amplify_ui_liveness_get_ready_photosensitivity_icon_a11y" = "Información sobre fotosensibilidad";
+"amplify_ui_liveness_get_ready_photosensitivity_dialog_title" = "Aviso de fotosensibilidad";
+"amplify_ui_liveness_get_ready_photosensitivity_dialog_description" = "Algunas personas pueden experimentar convulsiones epilépticas al exponerse a luces de colores. Ten precaución si tú o alguien de tu familia tiene epilepsia.";
+"amplify_ui_liveness_get_ready_begin_check" = "Iniciar verificación";
+
+"amplify_ui_liveness_challenge_recording_indicator_label" = "REC";
+"amplify_ui_liveness_challenge_instruction_move_face_back" = "Aléjate";
+"amplify_ui_liveness_challenge_instruction_move_face_closer" = "Acércate";
+"amplify_ui_liveness_challenge_instruction_move_face_in_front_of_camera" = "Coloca tu cara frente a la cámara";
+"amplify_ui_liveness_challenge_instruction_multiple_faces_detected" = "Solo una cara por verificación";
+"amplify_ui_liveness_challenge_instruction_hold_still" = "Mantente quieto";
+
+"amplify_ui_liveness_challenge_connecting" = "Conectando...";
+"amplify_ui_liveness_challenge_verifying" = "Verificando";
+"amplify_ui_liveness_challenge_cancel_a11y" = "Cancelar verificación";
+
+"amplify_ui_liveness_center_your_face_text" = "Centra tu cara";
+
+"amplify_ui_liveness_face_not_prepared_reason_move_face_closer" = "Acércate";
+"amplify_ui_liveness_face_not_prepared_reason_no_face" = "Coloca tu cara frente a la cámara";
+"amplify_ui_liveness_face_not_prepared_reason_multiple_faces" = "Solo una cara por verificación";
+"amplify_ui_liveness_face_not_prepared_reason_face_too_close" = "Aléjate";

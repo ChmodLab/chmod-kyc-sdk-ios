@@ -1,0 +1,34 @@
+//
+// Copyright Amazon.com Inc. or its affiliates.
+// All Rights Reserved.
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+// Chmod: translations ported from the chmod-liveness-android fork's
+// values-fr/strings.xml, matched by English source text to the key names
+// used in this iOS fork.
+
+"amplify_ui_liveness_get_ready_photosensitivity_title" = "Avertissement photosensibilité";
+"amplify_ui_liveness_get_ready_photosensitivity_description" = "Cette vérification clignote avec différentes couleurs. Soyez prudent si vous êtes photosensible.";
+"amplify_ui_liveness_get_ready_photosensitivity_icon_a11y" = "Informations sur la photosensibilité";
+"amplify_ui_liveness_get_ready_photosensitivity_dialog_title" = "Avertissement photosensibilité";
+"amplify_ui_liveness_get_ready_photosensitivity_dialog_description" = "Certaines personnes peuvent avoir des crises d'épilepsie en étant exposées à des lumières colorées. Soyez prudent si vous ou un membre de votre famille souffrez d'épilepsie.";
+"amplify_ui_liveness_get_ready_begin_check" = "Démarrer la vérification";
+
+"amplify_ui_liveness_challenge_recording_indicator_label" = "REC";
+"amplify_ui_liveness_challenge_instruction_move_face_back" = "Reculez";
+"amplify_ui_liveness_challenge_instruction_move_face_closer" = "Rapprochez-vous";
+"amplify_ui_liveness_challenge_instruction_move_face_in_front_of_camera" = "Placez votre visage face à la caméra";
+"amplify_ui_liveness_challenge_instruction_multiple_faces_detected" = "Un seul visage par vérification";
+"amplify_ui_liveness_challenge_instruction_hold_still" = "Restez immobile";
+
+"amplify_ui_liveness_challenge_connecting" = "Connexion...";
+"amplify_ui_liveness_challenge_verifying" = "Vérification";
+"amplify_ui_liveness_challenge_cancel_a11y" = "Annuler la vérification";
+
+"amplify_ui_liveness_center_your_face_text" = "Centrez votre visage";
+
+"amplify_ui_liveness_face_not_prepared_reason_move_face_closer" = "Rapprochez-vous";
+"amplify_ui_liveness_face_not_prepared_reason_no_face" = "Placez votre visage face à la caméra";
+"amplify_ui_liveness_face_not_prepared_reason_multiple_faces" = "Un seul visage par vérification";
+"amplify_ui_liveness_face_not_prepared_reason_face_too_close" = "Reculez";
