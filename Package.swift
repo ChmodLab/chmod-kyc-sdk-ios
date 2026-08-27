@@ -2,16 +2,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "ChmodKycKit",
+    name: "ChmodKyc",
     platforms: [.iOS(.v16)],
     products: [
-        .library(name: "ChmodKycKit", targets: ["ChmodKycKit", "ChmodLivenessIOS"])
+        .library(name: "ChmodKyc", targets: ["ChmodKyc"])
     ],
     targets: [
+        .target(
+            name: "ChmodKyc",
+            dependencies: ["ChmodKycKit", "ChmodLivenessIOS"]
+        ),
         .binaryTarget(
             name: "ChmodKycKit",
-            url: "https://github.com/ChmodLab/chmod-kyc-sdk-ios/releases/download/0.0.19/ChmodKycKit.xcframework.zip",
-            checksum: "70ed74667e8dd783e799abc2e234a5a5d650657cddea51f6ce8cec6b96108d5d"
+            url: "https://github.com/ChmodLab/chmod-kyc-sdk-ios/releases/download/0.0.21/ChmodKycKit.xcframework.zip",
+            checksum: "9c72e0a9e6a245869766a118127e9b5c18a5e67a361b0b62a03ba9e80ed3e9de"
         ),
         .binaryTarget(
             name: "ChmodLivenessIOS",
