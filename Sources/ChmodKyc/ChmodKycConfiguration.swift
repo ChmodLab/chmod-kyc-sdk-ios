@@ -12,7 +12,7 @@ public struct ChmodKycConfiguration: Equatable, Sendable {
     public var showsWelcomeScreen: Bool
     public var showsResultScreen: Bool
     public var showsErrorDetail: Bool
-    public var requiresLocationPermission: Bool
+    public var locationPermission: LocationPermission
 
     public init(
         appearance: Appearance = Appearance(),
@@ -21,7 +21,7 @@ public struct ChmodKycConfiguration: Equatable, Sendable {
         showsWelcomeScreen: Bool = Defaults.showsWelcomeScreen,
         showsResultScreen: Bool = Defaults.showsResultScreen,
         showsErrorDetail: Bool = Defaults.showsErrorDetail,
-        requiresLocationPermission: Bool = Defaults.requiresLocationPermission
+        locationPermission: LocationPermission = Defaults.locationPermission
     ) {
         self.appearance = appearance
         self.locale = locale
@@ -29,7 +29,7 @@ public struct ChmodKycConfiguration: Equatable, Sendable {
         self.showsWelcomeScreen = showsWelcomeScreen
         self.showsResultScreen = showsResultScreen
         self.showsErrorDetail = showsErrorDetail
-        self.requiresLocationPermission = requiresLocationPermission
+        self.locationPermission = locationPermission
     }
 }
 
@@ -37,6 +37,16 @@ extension ChmodKycConfiguration {
 
     public enum Theme: Equatable, Sendable {
         case system, light, dark
+    }
+
+    /// How the flow treats the device location permission.
+    public enum LocationPermission: Equatable, Sendable {
+        /// Ask for it, and end the flow with a failure if it is not granted.
+        case required
+        /// Ask for it, and continue either way.
+        case optional
+        /// Never ask, and report the location as not requested.
+        case disabled
     }
 
     public enum CornerStyle: Equatable, Sendable {

@@ -11,8 +11,28 @@ extension ChmodKycConfiguration {
             showWelcomeScreen: showsWelcomeScreen,
             showResultScreen: showsResultScreen,
             showErrorDetail: showsErrorDetail,
-            requireLocationPermission: requiresLocationPermission
+            locationPermission: locationPermission.kotlinValue
         )
+    }
+}
+
+private extension ChmodKycConfiguration.LocationPermission {
+    var kotlinValue: LocationPermissionMode {
+        switch self {
+        case .required: return .required
+        case .optional: return .optional
+        case .disabled: return .disabled
+        }
+    }
+}
+
+private extension ChmodKycConfiguration.LocationPermission {
+    init(kotlinName: String) {
+        switch kotlinName {
+        case "OPTIONAL": self = .optional
+        case "DISABLED": self = .disabled
+        default: self = .required
+        }
     }
 }
 
@@ -198,7 +218,9 @@ extension ChmodKycConfiguration {
         public static let showsWelcomeScreen = kotlin.showWelcomeScreen
         public static let showsResultScreen = kotlin.showResultScreen
         public static let showsErrorDetail = kotlin.showErrorDetail
-        public static let requiresLocationPermission = kotlin.requireLocationPermission
+        public static let locationPermission = ChmodKycConfiguration.LocationPermission(
+            kotlinName: kotlin.locationPermission.name
+        )
 
         public static let lightColors = ChmodKycConfiguration.ThemeColors(kotlin.lightColors)
         public static let darkColors = ChmodKycConfiguration.ThemeColors(kotlin.darkColors)

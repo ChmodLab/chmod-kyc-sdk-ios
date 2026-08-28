@@ -7,6 +7,7 @@ public enum ChmodKycFailureCode: Hashable, Sendable {
     case livenessError
     case cameraPermissionDenied
     case locationPermissionDenied
+    case locationPermissionPermanentlyDenied
     case unknownError
     /// A code introduced by a newer SDK than this package knows about.
     case unrecognized(String)
@@ -17,6 +18,7 @@ public enum ChmodKycFailureCode: Hashable, Sendable {
         case "LIVENESS_ERROR": self = .livenessError
         case "CAMERA_PERMISSION_DENIED": self = .cameraPermissionDenied
         case "LOCATION_PERMISSION_DENIED": self = .locationPermissionDenied
+        case "LOCATION_PERMISSION_PERMANENTLY_DENIED": self = .locationPermissionPermanentlyDenied
         case "UNKNOWN_ERROR": self = .unknownError
         default: self = .unrecognized(rawName)
         }
