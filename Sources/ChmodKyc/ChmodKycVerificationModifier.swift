@@ -21,13 +21,11 @@ public extension View {
         request: ChmodKycRequest,
         onResult: @escaping @MainActor (ChmodKycResult) -> Void
     ) -> some View {
-        fullScreenCover(isPresented: isPresented) {
-            ChmodKycFlowView(request: request) { result in
-                isPresented.wrappedValue = false
-                onResult(result)
-            }
-            .ignoresSafeArea()
-        }
+        let pending = Binding<ChmodKycRequest?>(
+            get: { isPresented.wrappedValue ? request : nil },
+            set: { value in if value == nil { isPresented.wrappedValue = false } }
+        )
+        return chmodKycVerification(request: pending, onResult: onResult)
     }
 
     /// Presents the chmod KYC verification flow full screen while `request` is non-`nil`.
@@ -44,47 +42,44 @@ public extension View {
         request: Binding<ChmodKycRequest?>,
         onResult: @escaping @MainActor (ChmodKycResult) -> Void
     ) -> some View {
-        let isPresented = Binding(
-            get: { request.wrappedValue != nil },
-            set: { presented in if !presented { request.wrappedValue = nil } }
+        background(
+            ChmodKycPresenter(request: request, onResult: onResult)
+                .frame(width: 0, height: 0)
+                .accessibilityHidden(true)
         )
-        return fullScreenCover(isPresented: isPresented) {
-            if let value = request.wrappedValue {
-                ChmodKycFlowView(request: value) { result in
-                    request.wrappedValue = nil
-                    onResult(result)
-                }
-                .ignoresSafeArea()
-            }
-        }
     }
 }
 
-struct ChmodKycFlowView: UIViewControllerRepresentable {
+private struct ChmodKycPresenter: UIViewControllerRepresentable {
 
-    let request: ChmodKycRequest
+    @Binding var request: ChmodKycRequest?
     let onResult: @MainActor (ChmodKycResult) -> Void
 
-    func makeCoordinator() -> Coordinator {
-        Coordinator(onResult: onResult)
-    }
+    func makeCoordinator() -> Coordinator { Coordinator() }
 
     func makeUIViewController(context: Context) -> UIViewController {
+        UIViewController()
+    }
+
+    func updateUIViewController(_ anchor: UIViewController, context: Context) {
         let coordinator = context.coordinator
-        return ChmodKyc.makeViewController(request: request) { result in
-            coordinator.onResult(result)
+        coordinator.onResult = onResult
+
+        guard let request, !coordinator.isPresenting else { return }
+        coordinator.isPresenting = true
+
+        DispatchQueue.main.async {
+            ChmodKyc.present(from: anchor, request: request) { result in
+                coordinator.isPresenting = false
+                self.request = nil
+                coordinator.onResult(result)
+            }
         }
     }
 
-    func updateUIViewController(_ controller: UIViewController, context: Context) {
-        context.coordinator.onResult = onResult
-    }
-
+    @MainActor
     final class Coordinator {
-        var onResult: @MainActor (ChmodKycResult) -> Void
-
-        init(onResult: @escaping @MainActor (ChmodKycResult) -> Void) {
-            self.onResult = onResult
-        }
+        var isPresenting = false
+        var onResult: @MainActor (ChmodKycResult) -> Void = { _ in }
     }
 }

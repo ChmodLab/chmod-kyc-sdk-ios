@@ -48,7 +48,7 @@ public enum ChmodKyc {
         request: ChmodKycRequest,
         onResult: @escaping @MainActor (ChmodKycResult) -> Void
     ) -> UIViewController {
-        ChmodKycKit.ChmodKyc.shared.createVerificationViewController(
+        let flow = ChmodKycKit.ChmodKyc.shared.createVerificationViewController(
             baseUrl: request.baseURL.absoluteString,
             sdkToken: request.sdkToken,
             sdkConfig: request.configuration.kotlinValue,
@@ -57,5 +57,6 @@ public enum ChmodKyc {
                 Task { @MainActor in onResult(result) }
             }
         )
+        return PortraitHostController(content: flow)
     }
 }
