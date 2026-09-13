@@ -179,6 +179,7 @@ private extension ChmodKycConfiguration.DocumentCapture {
             documentTypeDetectionMode: detectionMode.kotlinValue,
             documentPhotoCaptureMode: captureMode.kotlinValue,
             showPhotoPreview: showsPhotoPreview,
+            showDocumentTrackingOutline: showsDocumentTrackingOutline,
             maxPhotoRetakeOnFailed: Int32(maxRetakesOnFailure)
         )
     }
@@ -213,6 +214,7 @@ extension ChmodKycConfiguration {
             kotlinName: kotlin.documentPhotoCaptureMode.name
         )
         public static let showsPhotoPreview = kotlin.showPhotoPreview
+        public static let showsDocumentTrackingOutline = kotlin.showDocumentTrackingOutline
         public static let maxRetakesOnFailure = Int(kotlin.maxPhotoRetakeOnFailed)
 
         public static let showsWelcomeScreen = kotlin.showWelcomeScreen

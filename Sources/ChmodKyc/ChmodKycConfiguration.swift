@@ -211,17 +211,20 @@ extension ChmodKycConfiguration {
         public var detectionMode: DocumentDetectionMode
         public var captureMode: DocumentCaptureMode
         public var showsPhotoPreview: Bool
+        public var showsDocumentTrackingOutline: Bool
         public var maxRetakesOnFailure: Int
 
         public init(
             detectionMode: DocumentDetectionMode = Defaults.detectionMode,
             captureMode: DocumentCaptureMode = Defaults.captureMode,
             showsPhotoPreview: Bool = Defaults.showsPhotoPreview,
+            showsDocumentTrackingOutline: Bool = Defaults.showsDocumentTrackingOutline,
             maxRetakesOnFailure: Int = Defaults.maxRetakesOnFailure
         ) {
             self.detectionMode = detectionMode
             self.captureMode = captureMode
             self.showsPhotoPreview = showsPhotoPreview
+            self.showsDocumentTrackingOutline = showsDocumentTrackingOutline
             self.maxRetakesOnFailure = maxRetakesOnFailure
         }
     }
