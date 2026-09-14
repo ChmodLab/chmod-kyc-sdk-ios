@@ -14,8 +14,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "ChmodKycKit",
-            url: "https://github.com/ChmodLab/chmod-kyc-sdk-ios/releases/download/0.0.31/ChmodKycKit.xcframework.zip",
-            checksum: "26c89e5f9bf08e9db39fe1e8e5436108923529b34cea0db6b0178a25be377d0a"
+            url: "https://github.com/ChmodLab/chmod-kyc-sdk-ios/releases/download/0.0.32/ChmodKycKit.xcframework.zip",
+            checksum: "03f16694ecaade28e3dbc55eb2684d431aa290fae9ecd850508764e426c221c1"
         ),
         .binaryTarget(
             name: "ChmodLivenessIOS",

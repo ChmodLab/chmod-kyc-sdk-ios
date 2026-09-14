@@ -8,6 +8,8 @@ public enum ChmodKycFailureCode: Hashable, Sendable {
     case cameraPermissionDenied
     case locationPermissionDenied
     case locationPermissionPermanentlyDenied
+    /// `locationPermission` is `.required` but the app's Info.plist has no `NSLocationWhenInUseUsageDescription`.
+    case locationPermissionNotDeclared
     case unknownError
     /// A code introduced by a newer SDK than this package knows about.
     case unrecognized(String)
@@ -19,6 +21,7 @@ public enum ChmodKycFailureCode: Hashable, Sendable {
         case "CAMERA_PERMISSION_DENIED": self = .cameraPermissionDenied
         case "LOCATION_PERMISSION_DENIED": self = .locationPermissionDenied
         case "LOCATION_PERMISSION_PERMANENTLY_DENIED": self = .locationPermissionPermanentlyDenied
+        case "LOCATION_PERMISSION_NOT_DECLARED": self = .locationPermissionNotDeclared
         case "UNKNOWN_ERROR": self = .unknownError
         default: self = .unrecognized(rawName)
         }
