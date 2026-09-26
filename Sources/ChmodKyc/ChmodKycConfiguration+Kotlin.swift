@@ -8,7 +8,6 @@ extension ChmodKycConfiguration {
             appearance: appearance.kotlinValue,
             locale: locale.kotlinValue,
             documentCapture: documentCapture.kotlinValue,
-            showWelcomeScreen: showsWelcomeScreen,
             showResultScreen: showsResultScreen,
             showErrorDetail: showsErrorDetail,
             locationPermission: locationPermission.kotlinValue
@@ -219,7 +218,6 @@ extension ChmodKycConfiguration {
         public static let maxRetakesOnFailure = Int(kotlin.maxPhotoRetakeOnFailed)
         public static let trustsUserDocumentCapture = kotlin.trustUserDocumentCapture
 
-        public static let showsWelcomeScreen = kotlin.showWelcomeScreen
         public static let showsResultScreen = kotlin.showResultScreen
         public static let showsErrorDetail = kotlin.showErrorDetail
         public static let locationPermission = ChmodKycConfiguration.LocationPermission(

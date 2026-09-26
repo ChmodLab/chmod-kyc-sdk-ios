@@ -9,7 +9,6 @@ public struct ChmodKycConfiguration: Equatable, Sendable {
     public var appearance: Appearance
     public var locale: Locale
     public var documentCapture: DocumentCapture
-    public var showsWelcomeScreen: Bool
     public var showsResultScreen: Bool
     public var showsErrorDetail: Bool
     public var locationPermission: LocationPermission
@@ -18,7 +17,6 @@ public struct ChmodKycConfiguration: Equatable, Sendable {
         appearance: Appearance = Appearance(),
         locale: Locale = Locale(),
         documentCapture: DocumentCapture = DocumentCapture(),
-        showsWelcomeScreen: Bool = Defaults.showsWelcomeScreen,
         showsResultScreen: Bool = Defaults.showsResultScreen,
         showsErrorDetail: Bool = Defaults.showsErrorDetail,
         locationPermission: LocationPermission = Defaults.locationPermission
@@ -26,7 +24,6 @@ public struct ChmodKycConfiguration: Equatable, Sendable {
         self.appearance = appearance
         self.locale = locale
         self.documentCapture = documentCapture
-        self.showsWelcomeScreen = showsWelcomeScreen
         self.showsResultScreen = showsResultScreen
         self.showsErrorDetail = showsErrorDetail
         self.locationPermission = locationPermission
