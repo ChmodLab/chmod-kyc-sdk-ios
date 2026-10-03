@@ -14,13 +14,13 @@ let package = Package(
         ),
         .binaryTarget(
             name: "ChmodKycKit",
-            url: "https://github.com/ChmodLab/chmod-kyc-sdk-ios/releases/download/0.0.41/ChmodKycKit.xcframework.zip",
-            checksum: "fabede1ccf33ed2056ab838a99dccb93b1960bc96b667341b4ccee493688143e"
+            url: "https://github.com/ChmodLab/chmod-kyc-sdk-ios/releases/download/0.0.42/ChmodKycKit.xcframework.zip",
+            checksum: "04e58281da394e87e73e948f092bb15587ef5561a66b7c293a92cede1bb44fb4"
         ),
         .binaryTarget(
             name: "ChmodLivenessIOS",
-            url: "https://github.com/ChmodLab/chmod-kyc-sdk-ios/releases/download/chmod-liveness-ios-v1.0.0/ChmodLivenessIOS.xcframework.zip",
-            checksum: "a1e9b230e37ba854edc873f85b9316be45a0994ecad8fa243adcd204c6b97cc4"
+            url: "https://github.com/ChmodLab/chmod-kyc-sdk-ios/releases/download/chmod-liveness-ios-v1.0.3/ChmodLivenessIOS.xcframework.zip",
+            checksum: "8c569f7f1ee12f22fe3ce9cd09ae51090e5f2922d09564d5b6e9f5d1045eec4f"
         )
     ]
 )

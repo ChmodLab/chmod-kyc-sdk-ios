@@ -1,9 +1,5 @@
 import Foundation
 
-/// Appearance, localisation and capture options for the verification flow.
-///
-/// Every field has a default, so `ChmodKycConfiguration()` is a valid starting
-/// point and you only set what you want to change.
 public struct ChmodKycConfiguration: Equatable, Sendable {
 
     public var appearance: Appearance
@@ -36,13 +32,9 @@ extension ChmodKycConfiguration {
         case system, light, dark
     }
 
-    /// How the flow treats the device location permission.
     public enum LocationPermission: Equatable, Sendable {
-        /// Ask for it, and end the flow with a failure if it is not granted.
         case required
-        /// Ask for it, and continue either way.
         case optional
-        /// Never ask, and report the location as not requested.
         case disabled
     }
 
@@ -62,7 +54,6 @@ extension ChmodKycConfiguration {
         case auto, manual
     }
 
-    /// Hex colours (`"#RRGGBB"`). A `nil` field keeps the SDK default.
     public struct ThemeColors: Equatable, Sendable {
         public var primary: String?
         public var onPrimary: String?
@@ -172,7 +163,6 @@ extension ChmodKycConfiguration {
         }
     }
 
-    /// Overrides a single translated string for one language.
     public struct Translation: Equatable, Sendable {
         public var language: Language
         public var key: String

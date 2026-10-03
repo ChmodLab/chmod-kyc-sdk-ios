@@ -187,11 +187,6 @@ private extension ChmodKycConfiguration.DocumentCapture {
 
 extension ChmodKycConfiguration {
 
-    /// Values the SDK falls back to when you don't set a field.
-    ///
-    /// Read from the SDK itself, so they always match the Android defaults.
-    /// Useful as a starting point: `ThemeColors(primary: "#FF0000", ...)` on top of
-    /// `ChmodKycConfiguration.Defaults.lightColors`.
     public enum Defaults {
 
         private static var kotlin: SdkConfigDefaults { SdkConfigDefaults.shared }

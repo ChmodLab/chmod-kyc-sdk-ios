@@ -1,17 +1,14 @@
 import Foundation
 import ChmodKycKit
 
-/// Reason a verification could not be completed.
 public enum ChmodKycFailureCode: Hashable, Sendable {
     case documentScanMaxRetries
     case livenessError
     case cameraPermissionDenied
     case locationPermissionDenied
     case locationPermissionPermanentlyDenied
-    /// `locationPermission` is `.required` but the app's Info.plist has no `NSLocationWhenInUseUsageDescription`.
     case locationPermissionNotDeclared
     case unknownError
-    /// A code introduced by a newer SDK than this package knows about.
     case unrecognized(String)
 
     init(rawName: String) {
@@ -28,13 +25,11 @@ public enum ChmodKycFailureCode: Hashable, Sendable {
     }
 }
 
-/// Outcome of a verification flow.
 public enum ChmodKycResult: Hashable, Sendable {
     case completed(transactionID: UUID?)
     case cancelled(transactionID: UUID?)
     case failed(transactionID: UUID?, code: ChmodKycFailureCode, message: String)
 
-    /// Identifier of the transaction the flow ran against, when one was created.
     public var transactionID: UUID? {
         switch self {
         case let .completed(id), let .cancelled(id): return id
