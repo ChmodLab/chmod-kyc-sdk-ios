@@ -2,14 +2,14 @@ import Foundation
 
 public struct ChmodKycRequest: Equatable, Sendable {
 
-    public var baseURL: URL
+    public var baseURL: URL?
 
     public var sdkToken: String
 
     public var configuration: ChmodKycConfiguration
 
     public init(
-        baseURL: URL,
+        baseURL: URL? = nil,
         sdkToken: String,
         configuration: ChmodKycConfiguration = ChmodKycConfiguration()
     ) {

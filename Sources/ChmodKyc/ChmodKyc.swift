@@ -28,7 +28,7 @@ public enum ChmodKyc {
         onResult: @escaping @MainActor (ChmodKycResult) -> Void
     ) -> UIViewController {
         let flow = ChmodKycKit.ChmodKyc.shared.createVerificationViewController(
-            baseUrl: request.baseURL.absoluteString,
+            baseUrl: request.baseURL?.absoluteString,
             sdkToken: request.sdkToken,
             sdkConfig: request.configuration.kotlinValue,
             onResult: { kotlinResult in
