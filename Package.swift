@@ -1,8 +1,7 @@
 // swift-tools-version:5.9
 import PackageDescription
 
-// Private repo: resolving needs a token with contents:read on it, through
-// the Xcode GitHub account or ~/.netrc (machine api.github.com).
+// Public repo: SwiftPM resolves it, binaries included, with no token.
 let package = Package(
     name: "ChmodKyc",
     platforms: [.iOS(.v16)],
@@ -16,13 +15,13 @@ let package = Package(
         ),
         .binaryTarget(
             name: "ChmodKycKit",
-            url: "https://api.github.com/repos/ChmodLab/chmod-kyc-sdk-ios/releases/assets/648657430.zip",
-            checksum: "c345022b52eb99689444930fb16f4c9fcbf0ddfa93bfed70095b6f59469eb97d"
+            url: "https://github.com/ChmodLab/chmod-kyc-sdk-ios/releases/download/1.0.0/ChmodKycKit.xcframework.zip",
+            checksum: "54a9153db41fcc74bac2762cfc5fe83bcaf8087564a5582a740864211f069cc2"
         ),
         .binaryTarget(
             name: "ChmodLivenessIOS",
-            url: "https://api.github.com/repos/ChmodLab/chmod-kyc-sdk-ios/releases/assets/608281554.zip",
-            checksum: "8c569f7f1ee12f22fe3ce9cd09ae51090e5f2922d09564d5b6e9f5d1045eec4f"
+            url: "https://github.com/ChmodLab/chmod-kyc-sdk-ios/releases/download/chmod-liveness-ios-v1.0.0/ChmodLivenessIOS.xcframework.zip",
+            checksum: "26cef99b946aca5d37a940ccf4867ec8589b571786dfac4690990b0f14caf048"
         )
     ]
 )
